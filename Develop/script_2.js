@@ -32,13 +32,15 @@ var newPassword = []
     upperQ = confirm("Would you like your password to contain uppercase letters?");
 
     if (upperQ === true){
+        var upperQ = upperC.toUpperCase();
         (newPassword.push(upperC));
     }
 
     lowerQ = confirm("Would you like your password to contain lowercase letters?");
 
     if (lowerQ === true){
-        (newPassword.push(specials));
+        var lowerQ = lowerC.toLowerCase();
+        (newPassword.push(lowerC));
     }
 
 //If user declines all prompts than this pops up.
