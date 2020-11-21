@@ -5,15 +5,13 @@ var upperC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var numbers = "1234567890"
 var specials = "!#$%&'()*+,-./:;<=>/?@[]^_`{|}~"
 var password = "";
-//Defining new password here as an empty array to push accepted strings.
-var newPassword = []
-
 
 alert("Click big red button to start generating password.");
 
 //function to generate password starts
 function generatePassword() {
-
+//Defining new password as an empty array to push accepted strings.
+var newPassword = []
 //added an event listen to the button to trigger the prompts.
 document.getElementById("generate").addEventListener("click", Length)
 
@@ -86,11 +84,11 @@ document.getElementById("generate").addEventListener("click", Length)
 
 var stringPassword = newPassword.join("");
 
-//This is the for loop that randomizes the new string "stringPassword" and outputs "finalString". Joins randomized elements of finalString and stores the outcome until button to generate is pushed.
+//This is the for loop that randomizes the new string "stringPassword" and outputs "finalString". Joins randomized elements of finalString to password.
 
 for (let i = 0; i < Length; i++) {
     var finalString = stringPassword.charAt(Math.floor(Math.random() * stringPassword.length));
-    password = password.concat(finalString);  
+    password = password.concat(finalString);
 }
 //this displays the text within the "password" box
 document.getElementById("password").innerHTML = password;
